@@ -4,7 +4,7 @@ const app = express();
 const connectDB = require("./db/conne")
 const cors = require("cors")
 const router = require("./routes/router")
-const PORT = 5000; // You can use any port you prefer
+const PORT = process.env.PORT || 5000; // You can use any port you prefer
 
 app.get('/', (req, res) => {
   res.send('Hello, World!');
